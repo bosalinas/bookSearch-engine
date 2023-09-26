@@ -8,12 +8,14 @@ import { useMutation } from '@apollo/client';
 
 
 const SignupForm = () => {
+  console.log("1",1);
   // set initial form state
   const [userFormData, setUserFormData] = useState({ 
     username: '', 
     email: '', 
     password: '' 
   });
+  console.log("2",2);
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
@@ -21,6 +23,7 @@ const SignupForm = () => {
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
+    console.log("3",3);
     const { name, value } = event.target;
     setUserFormData({ 
       ...userFormData, 
@@ -29,6 +32,7 @@ const SignupForm = () => {
   };
 
   const handleFormSubmit = async (event) => {
+    console.log("4",4);
     event.preventDefault();
     console.log(userFormData);
 
