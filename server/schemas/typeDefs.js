@@ -16,7 +16,7 @@ const typeDefs = gql`
         bookId: ID!
         authors: [String]
         description: String
-        bookId: String
+
         image: String
         link: String
         title: String
@@ -25,7 +25,7 @@ const typeDefs = gql`
         bookId: String!
         authors: [String]
         description: String
-        bookId: String
+        
         image: String
         link: String
         title: String
@@ -41,7 +41,7 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         saveBook(input: BookInput!): User
-        removeBook:(bookId: ID!): User
+        removeBook(bookId: ID!): User
     }`;
 
     module.exports = typeDefs;
