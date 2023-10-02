@@ -22,7 +22,7 @@ const SearchBooks = () => {
   // hold local storage saved books 
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
   //saveBook mutation and catch errors during mutation
-  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+  const [saveBook] = useMutation(SAVE_BOOK);
 
  //runs when page renders
   useEffect(() => {
